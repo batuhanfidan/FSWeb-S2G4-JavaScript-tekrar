@@ -54,6 +54,7 @@ function CemberinCevresi(yariCap) {
   let etraf = yariCap*pi*2
   return etraf;
 }
+console.log(CemberinCevresi);
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
@@ -112,11 +113,11 @@ for (let i = 0; i < sayilar.length; i++){
     enbuyuk = sayilar[i];
   }
 }
-/*
+
 console.log(enbuyuk);
 console.log(enkucuk);
 console.log(enbuyuk*enbuyuk);
-*/
+
 
 
 // 3b çözümü:
@@ -128,7 +129,7 @@ sayilar.forEach(numbers => {
   }
 });
 
-//console.log(ucetambolunenler);
+console.log(ucetambolunenler);
 
 
 // 3c çözümü:
@@ -152,7 +153,7 @@ console.log(besyuzdenkucuksayilar);
 // 3e çözümü
 //3e. besyuzdenkucuksayilar dizisindeki sayıları küçükten büyüğe sıralayıp `siralisayilar` adındaki bir diziye aktarın (.sort metodunu kullanın)
 
-siralisayilar = [...sayilar];
+siralisayilar = [...besyuzdenkucuksayilar];
 siralisayilar.sort((a,b) => a-b);
 
 console.log(siralisayilar);
@@ -169,7 +170,7 @@ console.log(siralisayilar);
 		💡 İPUCU: Tekrar edilen sayıları ve kaç kere tekrar edildiğini kaydetmek için bir nesne tanımlamalısınız, bu görevi yapabilmek için en az 2 kere döngü yazmalısınız.*/ //Birinci döngüde hangi sayının kaç kere tekrar edildiğini tespit edip, 2. döngüde stringi oluşturup verilen diziye aktarmalısınız.
 
 tekraredensayilar = [];
-obje = {};
+const obje = {};
 for(let i = 0; i < sayilar.length; i++) {
   if (obje[sayilar[i]] === undefined) {
     obje[sayilar[i]] = 1
@@ -181,7 +182,7 @@ for(let i = 0; i < sayilar.length; i++) {
 
 sayilar.forEach((isim) => {
   if (obje[isim] > 1) {
-    tekraredensayilar.push(`${isim} sayısı ${obje[isim]} kere yazılmış`)
+    tekraredensayilar.push(`${isim} sayısı ${obje[isim]} kere tekrar edilmiştir`)
   }
 });
 
